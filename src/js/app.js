@@ -1,6 +1,4 @@
-// TODO: write your code here
-import sum from './basic';
+import Character from './Character';
 
-console.log('worked');
-
-console.log(sum([1, 2]));
+const hero = new Character('Tristan', 'Bowman');
+console.log(hero);
