@@ -1,7 +1,5 @@
 export default function Character(name, type) {
-  if (!(name.length < 2) && !(name.length > 10)) {
-    this.name = name;
-  } else {
+  if (name.length < 2 || name.length > 10) {
     throw new Error('Имя персонажа должно быть больше 1, но меньше 10 символов');
   }
 
@@ -40,6 +38,7 @@ export default function Character(name, type) {
       throw new Error('Неизвестный тип персонажа');
   }
 
+  this.name = name;
   this.health = 100;
   this.level = 1;
 }
